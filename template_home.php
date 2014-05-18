@@ -118,7 +118,7 @@ if ($post->post_content) : ?>
 			echo '<li class="';
 			if ($alt==1) echo 'alt ';
 			if ($loop==1 || $loop==2) echo 'first';
-			echo '"><a href="'.str_replace('&','&amp;',str_replace('&amp;','&',$social['link'])).'" style="background-image: url('.$social['icon'].')">'.$social['name'].'</a></li>';
+			echo '"><a target="_blank" href="'.str_replace('&','&amp;',str_replace('&amp;','&',$social['link'])).'" style="background-image: url('.$social['icon'].')">'.$social['name'].'</a></li>';
 			$alt = $alt*-1;
 			$loop++;
 		}
