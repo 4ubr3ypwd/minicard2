@@ -1,5 +1,113 @@
 <?php
 
+function minicard2_main_nav_ajax() { ?>
+	<script type="text/javascript">
+	/* <![CDATA[ */
+		jQuery.noConflict();
+
+		(function($) { 
+			$(function() {
+			
+				<?php if (get_option('main_nav_ajax')=='yes') : ?>
+							
+					// Main Nav Ajax Stuff
+					$('#mainNav a').click(function(){
+						var url = $(this).attr('href');
+						
+						$("#content").slideUp('',function(){
+							$(this).load( url + " #content .inner", function() {
+								$(this).slideDown();
+							})
+						});
+						
+						$('#mainNav li').removeClass('current_page_item current_page_parent current_page_ancestor');
+						$(this).parent().addClass('current_page_item');
+						return false;
+					});
+				
+				<?php endif; ?>
+					
+				// Feed AJAX
+				<?php if (file_exists(TEMPLATEPATH.'/premium/feed_head.js')) include(TEMPLATEPATH.'/premium/feed_head.js'); ?>
+			});
+		})(jQuery);
+	/* ]]> */
+	</script>
+<?php }
+
+function minicard2_themeslice_title_tag() {
+	if (function_exists('themeslice_title_tag')) : 
+		themeslice_title_tag(); 
+	else : 
+		wp_title('&laquo;', true, 'right');
+		bloginfo('name'); 
+	endif;
+}
+
+function minicard2_mtheme_inline() {
+	$mtheme = get_option('minicard_theme');
+	$mtheme_p = get_option('minicard_theme_p');
+	if (!$mtheme_p) $mtheme_p = 'burst.jpg';
+	if ($mtheme_p=='burst.jpg') $mtheme_repeat = 'no-repeat'; else $mtheme_repeat = 'repeat';
+	if ($mtheme) {
+		echo '<link rel="stylesheet" href="'.get_bloginfo('template_url').$mtheme.'/style.css" type="text/css" media="screen" />';
+		echo '
+			<style type="text/css">
+				body {
+					background-image: url('.get_bloginfo('template_url').''.$mtheme.'/images/bg/'.$mtheme_p.');
+					background-repeat:'.$mtheme_repeat.';
+				}
+			</style>
+		';
+	} else {
+		echo '
+			<style type="text/css">
+				body {
+					background-image: url('.get_bloginfo('template_url').'/images/bg/'.$mtheme_p.');
+					background-repeat: '.$mtheme_repeat.';
+				}
+			</style>
+		';
+	}
+}
+
+function minicard2_enqueue_scripts() {
+	wp_enqueue_style( 
+		'jquery.fancybox.css', 
+		get_template_directory_uri()
+			. 'js/jquery.fancybox/jquery.fancybox.css', 
+		array(
+			'jquery'
+		), 
+		'3.9', 
+		'all' 
+	);
+
+	wp_enqueue_script( 
+		'jquery.easing.1.3.js', 
+		get_template_directory_uri()
+			. 'js/jquery.fancybox/jquery.easing.1.3.js', 
+		array(
+			'jquery'
+		), 
+		'3.9', 
+		'all' 
+	);
+
+	wp_enqueue_script( 
+		'jquery.fancybox-1.2.1.pack.js', 
+		get_template_directory_uri()
+			. 'js/jquery.fancybox/jquery.fancybox-1.2.1.pack.js', 
+		array(
+			'jquery'
+		), 
+		'3.9',
+		'all' 
+	);
+}
+
+add_action( 'wp_enqueue_script', 'minicard2_enqueue_scripts' );
+
 function minicard2_register_nav_menu() {
 	register_nav_menu(
 		'minicard2-navigation',

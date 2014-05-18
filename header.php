@@ -1,106 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
-	<title><?php 
-		if (function_exists('themeslice_title_tag')) : 
-			themeslice_title_tag(); 
-		else : 
-			wp_title('&laquo;', true, 'right');
-			bloginfo('name'); 
-		endif;
-	?></title>
+	<title><?php minicard2_themeslice_title_tag(); ?></title>
 	
 	<meta name="viewport" content="width=device-width" />
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/js/jquery.fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-	<!--[if IE 7]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/hacks/hack7.css" type="text/css" /><![endif]-->
-	<!--[if IE 6]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/hacks/hack6.css" type="text/css" /><![endif]-->
 	
-	<?php
-		$mtheme = get_option('minicard_theme');
-		$mtheme_p = get_option('minicard_theme_p');
-		if (!$mtheme_p) $mtheme_p = 'burst.jpg';
-		if ($mtheme_p=='burst.jpg') $mtheme_repeat = 'no-repeat'; else $mtheme_repeat = 'repeat';
-		if ($mtheme) {
-			echo '<link rel="stylesheet" href="'.get_bloginfo('template_url').$mtheme.'/style.css" type="text/css" media="screen" />';
-			echo '
-				<style type="text/css">
-					body {
-						background-image: url('.get_bloginfo('template_url').''.$mtheme.'/images/bg/'.$mtheme_p.');
-						background-repeat:'.$mtheme_repeat.';
-					}
-				</style>
-			';
-		} else {
-			echo '
-				<style type="text/css">
-					body {
-						background-image: url('.get_bloginfo('template_url').'/images/bg/'.$mtheme_p.');
-						background-repeat: '.$mtheme_repeat.';
-					}
-				</style>
-			';
-		}
-	?>
+	<?php	minicard2_mtheme_inline(); ?>
 
-	<?php wp_enqueue_script('jquery'); wp_head(); ?>
-	
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.fancybox/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.fancybox/jquery.fancybox-1.2.1.pack.js"></script>	
-	<script type="text/javascript">
-	/* <![CDATA[ */
-		jQuery.noConflict();
-		(function($) { 
-			$(function() {
-			
-				<?php if (get_option('main_nav_ajax')=='yes') : ?>
-							
-				// Main Nav Ajax Stuff
-				$('#mainNav a').click(function(){
-					var url = $(this).attr('href');
-					
-					$("#content").slideUp('',function(){
-						$(this).load( url + " #content .inner", function() {
-							$(this).slideDown();
-						})
-					});
-					
-					$('#mainNav li').removeClass('current_page_item current_page_parent current_page_ancestor');
-					$(this).parent().addClass('current_page_item');
-					return false;
-				});
-				
-				<?php endif; ?>
-				
-				// Lightbox
-				$("a.lightbox, .gallery-item a").fancybox({ 
-					'zoomOpacity'			: true,
-					'overlayShow'			: true,
-					'zoomSpeedIn'			: 500,
-					'zoomSpeedOut'			: 500,
-					'easingIn'				: 'easeOutBack',
-					'easingOut'				: 'easeInBack'
-					}); 
-				$(".text-lightbox").fancybox({ 
-					'zoomOpacity'			: true,
-					'overlayShow'			: true,
-					'hideOnContentClick'	: false,
-					'padding'				: 18,
-					'callbackOnShow'		: function(){
-							$('#fancy_title').hide();
-						}
-					});
-					
-				// Feed AJAX
-				<?php if (file_exists(TEMPLATEPATH.'/premium/feed_head.js')) include(TEMPLATEPATH.'/premium/feed_head.js'); ?>				
-			});
-		})(jQuery);
-	/* ]]> */
-	</script>	
-	
+	<?php wp_head(); ?>
+
+	<?php minicard2_main_nav_ajax(); ?>	
 </head>
 <body>
 <div id="wrapper">
