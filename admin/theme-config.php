@@ -6,9 +6,9 @@
 
 function wp_minicard_menu() { 		
 	// Add a new top-level menu:
-	    add_menu_page(__('MiniCard','minicard'), __('MiniCard','minicard'), 6, basename(__FILE__) , 'wp_minicard_admin', get_bloginfo('template_url').'/admin/menu_icon.png');
+	    add_menu_page(__('MiniCard2','minicard'), __('MiniCard2','minicard'), 6, basename(__FILE__) , 'wp_minicard_admin', get_bloginfo('template_url').'/admin/menu_icon.png');
 	// Add submenus to the custom top-level menu:
-		add_submenu_page(basename(__FILE__), __('MiniCard Options','minicard'),  __('Options','minicard') , 6, basename(__FILE__) , 'wp_minicard_admin');
+		add_submenu_page(basename(__FILE__), __('MiniCard2 Options','minicard'),  __('Options','minicard') , 6, basename(__FILE__) , 'wp_minicard_admin');
 		add_submenu_page(basename(__FILE__), __('Instructions','minicard') , __('Instructions','minicard') , 6, 'minicard_instructions', 'wp_minicard_instructions');;
 }
 add_action('admin_menu', 'wp_minicard_menu');
@@ -47,7 +47,7 @@ $message = '';
 // Options = name, default, label, hint, rules
 $minicard_options = (
 	array( 
-		array(__('MiniCard Theme','minicard'), array(			
+		array(__('MiniCard2 Theme','minicard'), array(			
 			array('minicard_theme', '', __('Colour Scheme/Theme:','minicard'), '' ,'select_options', $minicardthemes,$minicardthemes_dir),
 			array('minicard_theme_p', '', __('Background Pattern:','minicard'),__('Stripes created by http://www.stripegenerator.com/ &amp; tartans by http://www.tartanmaker.com/. Magic!','minicard'),'select_options',__('Burst|Diagonal Stripe|Horizontal Stripe|Vertical Stripe|Tartan','minicard'),'burst.jpg|d_stripe.png|h_stripe.png|v_stripe.png|tartan.png')
 			)
@@ -289,17 +289,17 @@ function wp_minicard_instructions() {
 	
 	?><div class="wrap">
 		<h2><?php _e('Usage Instructions', 'minicard'); ?></h2>
-		<p><?php _e('Congratulations on obtaining the MiniCard WordPress Theme. These instructions should hopefully allow you to get the most out of your theme.', 'minicard'); ?></p>
+		<p><?php _e('Congratulations on obtaining the MiniCard2 WordPress Theme. These instructions should hopefully allow you to get the most out of your theme.', 'minicard'); ?></p>
 		
-		<h3><?php _e('MiniCard Options', 'minicard'); ?></h3>
-		<p><?php _e('The MiniCard Options page (available in WordPress admin) allows you to customise the theme\'s features. Most of the options are self explanatory, however some of the more advanced options are described below.', 'minicard'); ?></p>
+		<h3><?php _e('MiniCard2 Options', 'minicard'); ?></h3>
+		<p><?php _e('The MiniCard2 Options page (available in WordPress admin) allows you to customise the theme\'s features. Most of the options are self explanatory, however some of the more advanced options are described below.', 'minicard'); ?></p>
 		<ol>			
 			<li><?php _e('<em>hCard/vCard</em> - These options let you set your contact details which can be saved by the user as a vCard. Details are shown on the page in hCard format which is a microformat - http://microformats.org/wiki/hcard.', 'minicard'); ?></li>			
 			<li><?php _e('<em>Main Feed (Premium Theme Only):</em> - This allows you to show several feeds in the footer area all condensed into one. Feed URLS should be added one per line, in the format: <code>Source Name|Source URL|Feed URL</code>. E.g. <code>Blue Anvil|http://blue-anvil.com|http://feeds.feedburner.com/blueanvilblog</code>', 'minicard'); ?></li>			
 		</ol>
 		
 		<h3><?php _e('Portfolio Usage', 'minicard'); ?></h3>
-		<p><?php _e('MiniCard theme allows you to feature some work in the footer - to do this you need to set up a portfolio category, enter the category\'s ID on the MiniCard Options page, and then create some posts. Portfolio posts can contain the follow custom fields:', 'minicard'); ?></p>
+		<p><?php _e('MiniCard2 theme allows you to feature some work in the footer - to do this you need to set up a portfolio category, enter the category\'s ID on the MiniCard2 Options page, and then create some posts. Portfolio posts can contain the follow custom fields:', 'minicard'); ?></p>
 		<ul>
 			<li><?php _e('<em>link</em> If this is a website, or has a URL, enter the url here. When viewing the portfolio item the title will link here.', 'minicard'); ?></li>
 			<li><?php _e('<em>thumbnail</em> - URL to thumbnail for the portfolio item - should be 206x150. If this is not set, the first attched image will be used instead.', 'minicard'); ?></li>
