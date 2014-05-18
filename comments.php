@@ -8,7 +8,7 @@
 
 <div id="comments">
 
-<h2><?php comments_number(__('No Comments','minicard'), __('1 Comment','minicard'), __('% Comments','minicard') );?> <small><?php post_comments_feed_link( ); ?></small></h2>
+<p><?php comments_number(__('No Comments','minicard'), __('1 Comment','minicard'), __('% Comments','minicard') );?> <small class="post_comments_feed_link"><?php post_comments_feed_link( ); ?></small></p>
 
 <?php if ( have_comments() ) : ?>
 	

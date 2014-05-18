@@ -13,6 +13,7 @@ Tags: blue, light, fixed-width, one-column, custom-colors, theme-options, thread
 */
 @import 'css/reset.css';
 @import 'css/budhand/stylesheet.css';
+@import 'css/sharedaddy.css';
 
 /* @group Structure */
 html { 
@@ -52,6 +53,12 @@ a:hover, a:focus {
 	color: #000;
 	border-style: solid;
 	text-decoration: none;
+}
+
+hr {
+	border: 1px solid #D0ECF0;
+	color: #fff;
+	height: 0px !important;
 }
 
 .notice {
@@ -286,7 +293,7 @@ h5 {
 
 h1.title {
 	font-size: 1.2em;
-	border-bottom: 2px dotted #D0ECF0;
+	border-bottom: 1px solid #D0ECF0;
 	padding-bottom: 0.95em;
 	margin-bottom: 0;
 }
@@ -328,7 +335,7 @@ ul h2 {
 h3#respond {
 	padding-top: 1em;
 	line-height: 1em;
-	border-top: 2px dotted #D0ECF0;
+	border-top: 1px solid #D0ECF0;
 }
 
 
@@ -339,11 +346,11 @@ p, ul, ol, dl {
 }
 
 .home_content {
-	border-bottom: 2px dotted #D0ECF0;
+	border-bottom: 1px solid #D0ECF0;
 }
 
 .post {
-	border-bottom: 2px dotted #D0ECF0;
+	border-bottom: 1px solid #D0ECF0;
 	margin-bottom: 12px;
 }
 
@@ -377,7 +384,6 @@ p.meta {
 p.meta a {
 	text-decoration: none !important;
 	color: #719DA3 !important;
-	font-weight: normal;
 }
 
 .meta .comment {
@@ -768,6 +774,11 @@ form .submit:hover {
 }
 
 /* comments */
+
+.post_comments_feed_link{
+	float:right;
+}
+
 #comments {
 	padding: 0;
 }
@@ -801,6 +812,7 @@ form .submit:hover {
 
 .comment_container {
 	position: relative;
+	border-bottom: 1px solid #D0ECF0;
 }
 
 ol#comment-list {
@@ -810,7 +822,7 @@ ol#comment-list {
 
 ol#comment-list img.avatar {
 	margin: 0 8px 0 0;
-	float: left;
+	float: right;
 	padding: 2px;
 	background: #fff;
 	border: 1px solid #D0ECF0;
@@ -824,7 +836,7 @@ ol#comment-list li {
 }
 
 ol#comment-list li li {
-	margin-left: 36px !important;
+	margin-left: 15px !important;
 }
 
 ol#comment-list li ul.children {
@@ -834,8 +846,6 @@ ol#comment-list li ul.children {
 ol#comment-list li .comment-text {
 	clear: both;
 	overflow: hidden;
-	background: #F3FCFC;
-	padding: 0 1em 0;
 }
 
 ol#comment-list li p.meta {

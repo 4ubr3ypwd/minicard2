@@ -220,7 +220,18 @@ function themeslice_comments($comment, $args, $depth) {
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 		<div id="comment-<?php comment_ID(); ?>" class="comment_container">
 
-			<p class="meta"><?php echo get_avatar( $comment, $size='32' ); ?><strong><?php comment_author_link(); ?></strong> (<?php echo get_comment_date(); ?>, <?php echo get_comment_time(); ?>). <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></p>
+			<p class="meta">
+				<small>
+					<?php echo get_avatar( $comment, $size='32' ); ?><strong>
+					
+					<?php comment_author_link(); ?></strong><br>
+					<?php echo get_comment_date(); ?>, <?php echo get_comment_time(); ?>). 
+
+					<span class="bull-comment_reply_link">&mdash;</span>
+
+					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+					</small>
+			</p>
   			
   			<div class="comment-text">
   				<?php if ($comment->comment_approved == '0') : ?>
