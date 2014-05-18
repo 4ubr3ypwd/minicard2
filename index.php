@@ -37,7 +37,7 @@
 <?php if (have_posts()) : $full_post = get_option('full_post'); while (have_posts()) : the_post(); ?>
 
 	<div class="post">
-		<h2><a href="<?php echo get_permalink($post->ID); ?>"><?php the_title(); ?></a></h2>
+		<h2 class="post-title"><a href="<?php echo get_permalink($post->ID); ?>"><?php the_title(); ?></a></h2>
 		<?php
 		if (function_exists('the_post_thumbnail') && has_post_thumbnail()) :
 			echo '<a href="'.get_permalink($post->ID).'" class="post_thumbnail">';

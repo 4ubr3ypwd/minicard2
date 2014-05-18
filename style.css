@@ -120,7 +120,7 @@ hr {
 
 #header p {
 	font-size: 1.2em !important;
-	margin: 8px 0 0 !important;
+	margin: 0 0 0 !important;
 	padding: 0 0 0 0!important;
 	line-height: 1.4em !important;
 	letter-spacing: -0.05em;
@@ -132,15 +132,16 @@ hr {
 	display: block;
 	padding: 5px;
 	border: 1px solid #D0ECF0;
-	margin-right: 8px;
+	margin-right: 20px;
 	background: #fff;
 	line-height: 1 !important;
+	border-radius: 3px;
 }
 
 #name {
 	font-size: 1.6em !important;
-	margin: 0 !important;
-	padding: 8px 0 0 0!important;
+	margin: 11px 0 0 0  !important;
+	padding: 8 0 0 0!important;
 	line-height: 1.3em !important;
 	font-weight: bold;
 	letter-spacing: -0.05em;
@@ -345,6 +346,10 @@ p, ul, ol, dl {
 .post {
 	border-bottom: 1px solid #D0ECF0;
 	margin-bottom: 20px;
+}
+
+.post-title a{
+	text-decoration: none;
 }
 
 .post ul {
