@@ -32,12 +32,10 @@ body {
 #feeds {
 	clear: both;
 	min-height: 128px;
-	_height: 128px; /* IE6 Min Height */
 	overflow: visible;
 }
 
 #feeds ul {
-	_zoom: 1;
 	overflow: hidden;
 }
 
@@ -47,8 +45,7 @@ body {
 
 a {
 	color: #55AABB;
-	border-bottom: 1px dotted #A2C5CA;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 a:hover, a:focus {
@@ -508,6 +505,8 @@ blockquote cite {
 	border: 1px solid #D0ECF0;
 	padding: 5px;
 	outline: 3px solid #fff;
+	width: 98%;
+	height: auto;
 }
 
 #content .aligncenter {

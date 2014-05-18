@@ -1,4 +1,37 @@
 <?php
+
+function minicard2_common_meta() { ?>
+	<p class="meta">
+		
+		<?php if ( comments_open() ) : ?>
+			<span class="comment">
+				<a href="<?php echo get_permalink($post->ID); ?>#comments">
+					<?php comments_number('<strong>0</strong>', '<strong>1</strong>', '<strong>%</strong>'); ?>
+				</a>
+			</span>
+		<?php endif; ?>
+
+		<strong class="user">
+			<?php the_author_posts_link(); ?>
+		</strong> 
+
+		<br>
+
+		<span class="date">
+			<?php the_time('jS M Y'); ?>
+		</span> 
+
+		<br>
+
+		<span class="cat">
+			<?php if (function_exists('parentless_categories')) parentless_categories(','); else the_category( ', ', 'multiple' ); ?>
+		</span>
+
+		<?php the_tags(' <br> <span class="tag">', ', ', '</span>'); ?>
+	</p>
+
+<?php }
+
 if (file_exists(TEMPLATEPATH.'/admin/theme-config.php')) include_once("admin/theme-config.php");
 if (file_exists(TEMPLATEPATH.'parentless-categories.php')) include_once("parentless-categories.php");
 

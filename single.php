@@ -31,10 +31,13 @@
 					echo '</a>';
 				endif; 
 				?>	
-				<p class="meta"><?php if ( comments_open() ) : ?><span class="comment"><a href="<?php echo get_permalink($post->ID); ?>#comments"><?php comments_number('<strong>0</strong>', '<strong>1</strong>', '<strong>%</strong>'); ?></a></span><?php endif; ?><strong class="user"><?php the_author_posts_link(); ?></strong> &bull; <span class="date"><?php the_time('jS M Y'); ?></span> &bull; <span class="cat"><?php if (function_exists('parentless_categories')) parentless_categories(','); else the_category( ', ', 'multiple' ); ?></span><?php the_tags(' &bull; <span class="tag">', ', ', '</span>'); ?></p>
+
 				<?php
 					the_content();
 				?>
+
+				<?php minicard2_common_meta(); ?>
+
 				<div class="clear"></div>
 				<?php wp_link_pages(); ?> 
 			</div>

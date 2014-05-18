@@ -24,7 +24,7 @@
 	<?php if ('open' == $post->comment_status) : ?>
 		<!-- If comments are open, but there are no comments. -->
 	<?php else : // comments are closed ?>
-		<p><?php _e('Sorry, the comment form is closed at this time.', 'minicard'); ?></p>
+		<!-- Don't show anything if comments are closed. -->
 	<?php endif; ?>
 
 <?php endif; ?>
@@ -60,7 +60,7 @@
 	<?php endif; ?>
 
 <?php else : ?>
-	<p><?php _e('The comments are closed.', 'minicard'); ?></p>
+	<!-- Don't show anything if comments are closed. -->
 <?php endif; ?>
 
 </div>
