@@ -8,7 +8,19 @@
 
 <div id="comments">
 
-<p><?php comments_number(__('No Comments','minicard'), __('1 Comment','minicard'), __('% Comments','minicard') );?> <small class="post_comments_feed_link"><?php post_comments_feed_link( ); ?></small></p>
+<?php if ('open' == $post->comment_status) : ?>
+	<p>
+		<?php 
+			comments_number(
+				__('No Comments','minicard'), 
+				__('1 Comment','minicard'), 
+				__('% Comments','minicard') );
+		?> 
+		<small class="post_comments_feed_link">
+			<?php post_comments_feed_link( ); ?>
+		</small>
+	</p>
+<?php endif; ?>
 
 <?php if ( have_comments() ) : ?>
 	

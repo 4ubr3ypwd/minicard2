@@ -184,13 +184,6 @@ hr {
 	overflow: hidden;
 }
 
-
-#subContent {
-	padding: 36px 12px 0;	
-}
-
-
-
 div#footer {
 	clear: both;
 	color: #A0C4C9;
@@ -351,7 +344,7 @@ p, ul, ol, dl {
 
 .post {
 	border-bottom: 1px solid #D0ECF0;
-	margin-bottom: 12px;
+	margin-bottom: 20px;
 }
 
 .post ul {
@@ -375,7 +368,7 @@ p.meta {
 	color: #B5C7CB;
 	padding: 0;
 	line-height: 1.5em;
-	margin: 0 0 0.7em !important;
+	margin: 15px 0;
 	font-size: 0.8em;
 	overflow: hidden;
 	font-style: normal;
@@ -869,8 +862,8 @@ ol#comment-list li p.meta strong {
 /* @group Widgets */
 ul.widgets {
 	list-style: none !important;
-	margin: 0 !important;
-	padding: 0 !important;
+	margin: 10px 0;
+	padding: 0 10px;
 }
 
 li.widget {

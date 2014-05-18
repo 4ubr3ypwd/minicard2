@@ -18,12 +18,24 @@ add_action('admin_menu', 'wp_minicard_menu');
 ################################################################################
 
 $message = '';
-if (file_exists(TEMPLATEPATH.'/premium/feed.php')) {
 	// Premium
-	$message = __('The options below are used to configure the theme.','minicard');
-	$minicardthemes = __('Default|Black|Grey|Pink|Blue-Anvil Blue|Helveticard','minicard');
-	$minicardthemes_dir = '|/premium/themes/black|/premium/themes/grey|/premium/themes/pink|/premium/themes/bablue|/premium/themes/helveticard';
-	$minicardthemes_feed = array(__('Main Feed (Premium Theme Only)','minicard'), array(
+	// $message = __('The options below are used to configure the theme.','minicard');
+	// $minicardthemes = __('Default|Black|Grey|Pink|Blue-Anvil Blue|Helveticard','minicard');
+	// $minicardthemes_dir = '|/premium/themes/black|/premium/themes/grey|/premium/themes/pink|/premium/themes/bablue|/premium/themes/helveticard';
+	// $minicardthemes_feed = array(__('Main Feed (Premium Theme Only)','minicard'), array(
+	// 	array('show_footer_feeds', 'yes' , __('Show Feed?','minicard'),'','yesno'),
+	// 	array('home_feed_title', __('What I\'m Saying','minicard'), __('Feed title:','minicard'),'',''),
+	// 	array('home_feed_limit', '10', __('Max Items shown:','minicard'),'',''),
+	// 	array('home_feed', '', __('Feed URLs:','minicard'),__('Add RSS feed urls for the main feed (appears on all pages). Use the format: Source Name|Source URL|Feed URL. One per line.','minicard'),'textarea'),	
+	// 	array('twitter_username', '', __('Twitter Username:','minicard'),__('(optional) Enter your twitter username if you are showing a twitter feed and want to remove your name from the beginning of tweets.','minicard'),''),		
+	// 	)
+	// );
+
+	// // Basic
+	// $message = __('The options below are used to configure the theme.','minicard').' '.__('Upgrade to the premium version of MiniCard to help support the author, get more sub-themes, and enable the main feed functionality.','minicard');
+	$minicardthemes = __('Default','minicard');
+	$minicardthemes_dir = '';	
+	$minicardthemes_feed = array(__('Main Feed','minicard'), array(
 				array('show_footer_feeds', 'yes' , __('Show Feed?','minicard'),'','yesno'),
 				array('home_feed_title', __('What I\'m Saying','minicard'), __('Feed title:','minicard'),'',''),
 				array('home_feed_limit', '10', __('Max Items shown:','minicard'),'',''),
@@ -31,13 +43,6 @@ if (file_exists(TEMPLATEPATH.'/premium/feed.php')) {
 				array('twitter_username', '', __('Twitter Username:','minicard'),__('(optional) Enter your twitter username if you are showing a twitter feed and want to remove your name from the beginning of tweets.','minicard'),''),		
 				)
 			);
-} else {
-	// Basic
-	$message = __('The options below are used to configure the theme.','minicard').' '.__('Upgrade to the premium version of MiniCard to help support the author, get more sub-themes, and enable the main feed functionality.','minicard');
-	$minicardthemes = __('Default','minicard');
-	$minicardthemes_dir = '';	
-	$minicardthemes_feed = array(__('Main Feed (Premium Theme Only)','minicard'), array());
-}
 
 // Options = name, default, label, hint, rules
 $minicard_options = (
