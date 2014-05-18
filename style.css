@@ -348,7 +348,7 @@ p, ul, ol, dl {
 }
 
 .post ul {
-	margin: 18px 36px !important;
+	margin: 10px 19px !important;
 	list-style: disc outside;
 }
 
@@ -361,7 +361,7 @@ p, ul, ol, dl {
 
 .post ol {
 	list-style: decimal outside;
-	margin: 18px 36px !important;
+	margin: 10px 19px !important;
 }
 
 p.meta {
