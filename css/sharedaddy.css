@@ -9,5 +9,18 @@
 }
 
 .jp-relatedposts-headline{
-	width: 100%
+	width: 100%;
+}
+
+div.jp-relatedposts {
+	padding-top: 0 !important;
+	margin: 0 !important;
+}
+
+div.sharedaddy.sd-sharing-enabled {
+	margin-top: 20px !important;
+}
+
+div.robots-nocontent.sd-block.sd-social.sd-social-icon-text.sd-sharing {
+	padding: 20px 0 0 0 !important;
 }
