@@ -509,8 +509,12 @@ blockquote cite {
 	border: 1px solid #D0ECF0;
 	padding: 5px;
 	outline: 3px solid #fff;
-	width: 98%;
+	max-width: 98%;
 	height: auto;
+}
+
+.post_thumbnail {
+	display:none !important;
 }
 
 #content .aligncenter {
@@ -991,6 +995,17 @@ tbody td.pad {
 
 .widget_calendar tbody td a {
 	color: #719DA3;
+}
+
+#mainContent img {
+	max-width: 100%;
+	height: auto;
+}
+
+#mainContent p iframe, 
+#mainContent p object {
+	height: 250px;
+	max-width: 100%;
 }
 
 /* @end */
