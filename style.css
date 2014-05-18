@@ -49,14 +49,14 @@ a {
 	color: #55AABB;
 	border-bottom: 1px dotted #A2C5CA;
 	text-decoration: none;
-	}
-	
+}
+
 a:hover, a:focus {
 	color: #000;
 	border-style: solid;
 	text-decoration: none;
-	}
-	
+}
+
 .notice {
 	display: block;
 	background: #FFFDDE;
@@ -81,8 +81,8 @@ a:hover, a:focus {
 	margin: 0 auto;
 	text-align: left;
 	width: 472px;
-	}
-	
+}
+
 #header {
 	background: url(images/header.png) no-repeat top left;
 	overflow: hidden;
@@ -140,8 +140,8 @@ a:hover, a:focus {
 	line-height: 1.3em !important;
 	font-weight: bold;
 	letter-spacing: -0.05em;
-	}
-	
+}
+
 #name a {
 	color: #667777;
 	display: block;
@@ -154,14 +154,14 @@ a:hover, a:focus {
 	margin: 0;
 	padding: 0 12px;
 	background: url(images/content.png) repeat-y top left;
-	}
-	
+}
+
 #content_wrapper {
 	margin: 0;
 	padding: 0 0 14px;
 	background: url(images/footer.png) no-repeat bottom left;
-	}
-	
+}
+
 #content {
 	margin: 0;
 	padding: 0 12px;
@@ -179,7 +179,7 @@ a:hover, a:focus {
 	width: 412px;
 	overflow: hidden;
 }
-	
+
 
 #subContent {
 	padding: 36px 12px 0;	
@@ -192,8 +192,8 @@ div#footer {
 	color: #A0C4C9;
 	line-height: 1.6em;
 	padding: 0 12px 72px;
-	}
-	
+}
+
 div#footer ul {
 	margin-bottom: 0 !important;
 }
@@ -224,8 +224,8 @@ div#footer li.last {
 
 div#footer a {
 	color: #A0C4C9;
-	}
-	
+}
+
 .clear {
 	height: 0 !important;
 	font-size: 0 !important;
@@ -240,8 +240,8 @@ div#footer a {
 .paging {
 	margin: 18px 0 !important;
 	overflow: hidden;
-	}
-	
+}
+
 .paging a, .paging span {
 	padding: 0 2px;
 	font-weight: bold;
@@ -260,8 +260,8 @@ h1, h2, h3, h4, h5, h6, .pagetitle {
 	line-height: 1.2em;
 	color: #667777;
 	letter-spacing: -0.02em;
-	}
-	
+}
+
 h1 {
 	font-size: 1.5em;
 	font-weight: bold;
@@ -339,8 +339,8 @@ h3#respond {
 p, ul, ol, dl {
 	margin: 1em 0 1em 0;
 	line-height: 1.6em;
-	}
-	
+}
+
 .home_content {
 	border-bottom: 2px dotted #D0ECF0;
 }
@@ -348,25 +348,25 @@ p, ul, ol, dl {
 .post {
 	border-bottom: 2px dotted #D0ECF0;
 	margin-bottom: 12px;
-	}
-	
+}
+
 .post ul {
 	margin: 18px 36px !important;
 	list-style: disc outside;
-	}
-	
+}
+
 .post ol li, .post ul li {
 	padding: 0;
 	line-height: 1.6em;
 	margin-bottom: 10px;
 	margin-left: 12px;
-	}
-	
+}
+
 .post ol {
 	list-style: decimal outside;
 	margin: 18px 36px !important;
-	}
-	
+}
+
 p.meta {
 	color: #B5C7CB;
 	padding: 0;
@@ -375,14 +375,14 @@ p.meta {
 	font-size: 0.8em;
 	overflow: hidden;
 	font-style: normal;
-	}
-	
+}
+
 p.meta a {
 	text-decoration: none !important;
 	color: #719DA3 !important;
 	font-weight: normal;
-	}
-	
+}
+
 .meta .comment {
 	float: right;
 	margin-left: 10px;
@@ -418,16 +418,16 @@ p.meta a {
 
 strong {
 	font-weight: bold;
-	}
-	
+}
+
 em {
 	font-style: italic;
-	}
-	
+}
+
 small {
 	font-size: 0.9em;
-	}
-	
+}
+
 abbr, span.abbr {
 	cursor: help;
 	border-bottom: 1px dashed #D0ECF0;
@@ -446,8 +446,8 @@ blockquote {
 	background: #F3FCFC;
 	font-family: Georgia, Times New Roman, Times, serif;
 	font-size: 1em;
-	}
-	
+}
+
 cite {
 	margin-left: 1em;
 	font-style: italic;
@@ -496,13 +496,13 @@ blockquote cite {
 #content .alignleft{
 	float: left;
 	margin: 4px 18px 8px 0;
-	}
-	
+}
+
 #content .alignright {
 	float: right;
 	margin: 4px 0 8px 18px;
-	}
-	
+}
+
 #content img.alignright, #content img.alignleft, #content img.aligncenter {
 	background: #fff;
 	border: 1px solid #D0ECF0;
@@ -513,8 +513,8 @@ blockquote cite {
 #content .aligncenter {
 	margin: 10px auto 5px;
 	display: block;
-	}
-	
+}
+
 #content img.alignnone + img.alignnone  {
 	margin-left: 8px;
 }
@@ -556,8 +556,8 @@ p.wp-caption-text {
 		line-height: 1 !important;
 		overflow: hidden;
 		padding: 0 9px;
-		}
-		
+	}
+
 	#mainNav li {
 		margin: 0;
 		padding: 0;
@@ -566,8 +566,8 @@ p.wp-caption-text {
 		text-indent: 0 !important;			
 		float:left;	
 		position: relative;		
-		}
-		
+	}
+
 	#mainNav li a {
 		color: #667777;
 		font-weight: bold;
@@ -579,25 +579,25 @@ p.wp-caption-text {
 		line-height: 2.5em;
 		position: relative;
 		float: none;
-		}
-		
+	}
+
 	#mainNav li a:hover, #mainNav li a:focus {
 		color: #7F9191 !important;
 		text-decoration: underline;
-	}
-	
+}
+
 	#mainNav li.current_page_item a, #mainNav li.current_page_ancestor a,  #mainNav li.current_page_parent a, #mainNav li.current-menu-item a {
 		color: #AEC7CB !important;
 		background: url(images/nav_active.png) no-repeat bottom center;
-	}
-	
+}
+
 	#mainNav li.search {
 		float: right;
-	}
-	
+}
+
 /* Sub Levels */
 	#mainNav ul ul { display: none; }
-	
+
 /* End Main Nav */
 
 ul.folio {
@@ -708,19 +708,19 @@ table {
 	overflow: hidden;
 	padding: 7px 0 0 0;
 	font-size: 0.8em;
-	}
-	
+}
+
 .searchform .hidden {
 	display: none;
-	}
-	
+}
+
 .searchform input.text {
 	width: 60px;
 	border-right: 0;
 	margin: 0;
 	border-color: #D0ECF0;
-	}
-	
+}
+
 .searchform .submit {
 	padding: 2px 2px;
 	margin: 0;
@@ -734,8 +734,8 @@ table {
 form #comment {
 	width: 404px;
 	height: 100px;
-	}
-	
+}
+
 form input.text, form select, form textarea {
 	border: 1px solid #A2C5CA;
 	border-left-color: #8CAAAE;
@@ -747,12 +747,12 @@ form input.text, form select, form textarea {
 	font-family: Lucida Grande, Arial, sans-serif;
 	font-size: 1em;
 	color: #6A9399;
-	}
-	
+}
+
 form  label {
 	font-size: 1em;
-	}
-	
+}
+
 form .submit {
 	padding: 0.6em;
 	border: 2px solid #D0ECF0;
@@ -807,23 +807,23 @@ form .submit:hover {
 ol#comment-list {
 	padding: 0 !important;
 	margin: 0 !important;
-	}
-	
+}
+
 ol#comment-list img.avatar {
 	margin: 0 8px 0 0;
 	float: left;
 	padding: 2px;
 	background: #fff;
 	border: 1px solid #D0ECF0;
-	}
-	
+}
+
 ol#comment-list li {
 	padding: 0 !important;
 	margin: 0 0 18px !important;
 	list-style: none;
 	overflow: hidden;
-	}
-	
+}
+
 ol#comment-list li li {
 	margin-left: 36px !important;
 }
@@ -837,8 +837,8 @@ ol#comment-list li .comment-text {
 	overflow: hidden;
 	background: #F3FCFC;
 	padding: 0 1em 0;
-	}
-	
+}
+
 ol#comment-list li p.meta {
 	font-weight: normal;
 	background: transparent;
@@ -850,8 +850,8 @@ ol#comment-list li p.meta {
 	line-height: 36px;
 	clear: both;
 	font-size: 0.9em !important;
-	}
-	
+}
+
 ol#comment-list li p.meta strong {
 	color: #719DA3;
 }
