@@ -1,5 +1,14 @@
 <?php
 
+function minicard2_register_nav_menu() {
+	register_nav_menu(
+		'minicard2-navigation',
+		__( 'Navigation' )
+	);
+}
+
+add_action( 'init', 'minicard2_register_nav_menu' );
+
 function minicard2_common_meta() { ?>
 	<p class="meta">
 		

@@ -165,14 +165,7 @@
 	</div>
 	<div class="clear"></div>
 	<div id="mainNav">
-		<?php
-			if (function_exists('wp_nav_menu')) :
-				add_filter( 'wp_nav_menu_items', 'minicard_menu_search_box', 1, 2 );
-				wp_nav_menu( array( 'container' => '', 'depth' => 1, 'fallback_cb' => 'minicard_page_menu' ));
-			else :
-				minicard_page_menu();
-			endif;
-		?>
+		<?php wp_nav_menu(); ?>
 		<div class="clear"></div>
 	</div>
 	<div id="content_wrapper"><div id="content"><div class="inner">
